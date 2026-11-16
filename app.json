@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "System",
+    "slug": "kidmonitor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "bundleIdentifier": "com.kidmonitor.app",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Required for system services",
+        "NSLocationAlwaysUsageDescription": "Required for system services",
+        "NSLocationWhenInUseUsageDescription": "Required for system services",
+        "UIBackgroundModes": ["location", "fetch", "processing"]
+      }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Required for system services",
+          "isIosBackgroundLocationEnabled": true
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "kidmonitor-app"
+      }
+    }
+  }
+}
